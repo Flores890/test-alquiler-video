@@ -2,7 +2,7 @@ from dataclasses import field
 
 from pydantic import BaseModel, EmailStr, Field
 
-class Disco:
+class Video:
     codigo: str = Field(..., min_length=8, max_length=8, description="Codigo ded identificacion unica de la entidad ")
     nome: str = Field(...,min_length=8, max_length=64, description="Titulo o nombre de la pelicula")
     sinopsis: str= Field(...,min_length=16, max_length= 256, description="Sinopsis de la pelicula")
@@ -34,9 +34,3 @@ class Disco:
 
         }
     }
-
-class Usuario:
-    Nombre: str = Field(..., min_length=8, max_length=64, description="Nombre completo del usuario")
-    Apellido: str = Field(..., min_length=8, max_length=64, description="Apellido del usuario")
-    correo: str = Field(..., min_length=8, max_length=64, description="Correo del usuario")
-    contrasenia: str = Field(...,min_length=8, max_length=64, description="Contraseña del usuario")
